@@ -1,0 +1,5 @@
+username="admin"
+password="$secretunifipw"
+baseurl="https://<url>:<port>"
+site="default"
+
