@@ -73,5 +73,6 @@ if [ $found = 0 ]; then
  echo "nobody at home..."
 fi
 
-
+rm $tmpfile1
+rm $tmpfile2
 
