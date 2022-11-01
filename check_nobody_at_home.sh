@@ -50,7 +50,11 @@ cp $source $dest
 tmpfile1=$(mktemp)
 tmpfile2=$(mktemp)
 
-API="./unifi-api.sh"
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+API="${DIR}/unifi-api.sh"
+
+cd $DIR
+
 $API /stat/sta $tmpfile1
 cat $tmpfile1 | jq -r '.data[]|.mac'  >$tmpfile2
 
