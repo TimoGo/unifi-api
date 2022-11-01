@@ -6,7 +6,8 @@ terminatescript(){
  exit $1
 }
 
-source config.txt
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+source $DIR/config.txt
 
 test $# = 2 || terminatescript 1 "unifi-api.sh <api_endpoint> <tmp_file>"
 
